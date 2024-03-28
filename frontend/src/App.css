@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+  background-color: black;
+}
+
+.product-image{
+  max-width: 400px;
+  width: 100%;
+}
+
+.rating span{
+  color:gold;
+}
+
+img.large{
+  max-width: 100%;
+}

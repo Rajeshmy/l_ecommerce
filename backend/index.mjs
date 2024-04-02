@@ -4,6 +4,7 @@ import Express from "express";
 import  pdprouter  from "./router/pdproute.mjs";
 import  userrouter  from "./router/ userrouter .mjs";
 import cartrouter from "./router/cartrouter.mjs";
+import myordersrouter from "./router/myordersrouter.mjs";
 import errorHandler from './middleware/errorHandling.js';
 import mongoose, { connect } from "mongoose";
 import dotenv from "dotenv";
@@ -20,6 +21,8 @@ server.use(errorHandler);
 server.use('/api/products',pdprouter);
 server.use('/user',userrouter);
 server.use('/api/addtocart',cartrouter);
+server.use('/api/placeorder',myordersrouter);
+
 
 
 const connectdb = async()=>{
@@ -30,7 +33,6 @@ const connectdb = async()=>{
     console.log("error while db connection",err)
   }
 }
-
 
 
 server.listen(port,()=>{

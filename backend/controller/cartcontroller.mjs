@@ -7,7 +7,6 @@ const addtocart = asyncHandler(async(req,res)=>{
 
    const cartitem = req?.params?.props.split(":")[1]
    const user = req?.user?.user||'';
-   
    const data = productData.filter((e)=>{
       return e.slug === cartitem;
    });

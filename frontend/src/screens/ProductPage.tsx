@@ -19,8 +19,6 @@ export default function ProductPage() {
   const {slug}=params;
   const {data:productdetails,isLoading,error} = useGetProductDetailsQuery(slug);
 
-
-  
   
   return (
     <div>

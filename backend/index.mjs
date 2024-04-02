@@ -18,9 +18,10 @@ server.use(cors());
 server.use(Express.json());
 server.use(errorHandler);
 
+
 server.use('/api/products',pdprouter);
 server.use('/user',userrouter);
-server.use('/api/addtocart',cartrouter);
+server.use('/api/cart',cartrouter);
 server.use('/api/placeorder',myordersrouter);
 
 

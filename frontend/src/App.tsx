@@ -22,11 +22,14 @@ useEffect(()=>{
       <header>
         <Navbar bg="dark" variant='dark' expand="lg">
           <Container >
+          <a href="/" className='nav-link'>
           <Navbar.Brand>LAmazon</Navbar.Brand>
+          </a>
           </Container>
           <Nav>
             <a href="/cart" className='nav-link'>Cart</a>
-            <a href="/signin" className='nav-link'>Sign In</a>
+            <a href="/myorders" className='nav-link'>MyOrders</a>
+            <a href="/signin" className='nav-link'>SignIn</a>
           </Nav>
         </Navbar>
       </header>

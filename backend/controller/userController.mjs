@@ -62,7 +62,6 @@ export const login=expressAsyncHandler(async(req,res)=>{
 
 export const getusers=expressAsyncHandler(async(req,res)=>{
    const data = await userData.find();
-   console.log(data)
    res.status(200).json(data);
 
 });

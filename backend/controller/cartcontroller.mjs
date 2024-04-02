@@ -33,4 +33,16 @@ const addtocart = asyncHandler(async(req,res)=>{
    
 });
 
-export {addtocart}
+
+const getcartdetails = asyncHandler(async(req,res)=>{
+
+   const user = req?.user?.user||'';
+   const data = await cartData.find({user:user});
+   
+   if(!data) return res.end("some error occured")
+   res.status(200).json(data);
+});
+
+
+
+export {addtocart,getcartdetails}

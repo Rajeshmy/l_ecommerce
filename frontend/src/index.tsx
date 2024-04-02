@@ -5,6 +5,10 @@ import './index.css';
 import App from './App';
 import HomePage from './screens/HomePage';
 import ProductPage from './screens/ProductPage';
+import Login from './screens/Login';
+import Cart from './screens/Cart';
+import Myorder from './screens/Myorder';
+import Register from './screens/Register';
 import axios from 'axios';
 import { store } from './store/store';
 import { Provider } from 'react-redux';
@@ -18,10 +22,14 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App/>} >
        <Route index={true} element={<HomePage/>}></Route>
-       <Route path="product/:slug" element={<ProductPage/>}></Route>
+       <Route path="/register" element={<Register/>}></Route>
+       <Route path="/signin" element={<Login/>}></Route>
+       <Route path="/product/:slug" element={<ProductPage/>}></Route>
+       <Route path="/cart" element={<Cart/>}></Route>
+       <Route path="/myorders" element={<Myorder/>}></Route>
     </Route>
   )
-)
+);
 
 const queryClient = new QueryClient()
 
